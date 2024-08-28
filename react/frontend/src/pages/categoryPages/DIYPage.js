@@ -74,7 +74,7 @@ const DIYPage = () => {
                     <Typography>All Contents</Typography>
                 </Box>
 
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => <Contents key={i} />)}
+                <Contents category="diy" />
             </Box>
         </ThemeProvider>
     );

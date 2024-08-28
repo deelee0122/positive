@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import CustomerRating from '../CustomerRating';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-// Styling for the image component
 const Img = styled('img')({
   margin: 'auto',
   display: 'block',
@@ -16,25 +16,30 @@ const Img = styled('img')({
   borderRadius: '8px'
 });
 
-const Contents = () => {
-  // State to hold hobbies data
+const Contents = ({ category }) => {
   const [hobbies, setHobbies] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
-  const [error, setError] = useState(null); // Error state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Fetch hobbies data from backend API
+  const navigate = useNavigate();
+
   useEffect(() => {
-    axios.get('/api/hobbies') // Ensure this endpoint matches your backend
+    axios.get('/api/hobbies')
       .then(response => {
-        setHobbies(response.data); // Set the fetched data to the state
-        setLoading(false); // Update loading state
+        const filteredHobbies = category ? response.data.filter(hobby => hobby.hcategory === category) : response.data;
+        setHobbies(filteredHobbies);
+        setLoading(false);
       })
       .catch(error => {
         console.error('There was an error fetching the hobbies data!', error);
-        setError(error); // Set error state
-        setLoading(false); // Update loading state
+        setError(error);
+        setLoading(false);
       });
-  }, []);
+  }, [category]);
+
+  const handleImageClick = (hobby_id) => {
+    navigate(`/product/${hobby_id}`);
+  };
 
   if (loading) {
     return <Typography>Loading...</Typography>;
@@ -46,9 +51,9 @@ const Contents = () => {
 
   return (
     <div>
-      {hobbies.map((hobby) => ( // 'hobby' is defined here as the current item in the 'hobbies' array
+      {hobbies.map((hobby) => (
         <Paper
-          key={hobby.hobby_id} // Unique key for each element
+          key={hobby.hobby_id}
           sx={{
             p: 2,
             margin: 'auto',
@@ -60,7 +65,10 @@ const Contents = () => {
         >
           <Grid container spacing={2}>
             <Grid item>
-              <ButtonBase sx={{ width: 128, height: 128 }}>
+              <ButtonBase
+                sx={{ width: 128, height: 128 }}
+                onClick={() => handleImageClick(hobby.hobby_id)}
+              >
                 <Img alt="sample_image" src={hobby.hphoto} />
               </ButtonBase>
             </Grid>
@@ -73,7 +81,7 @@ const Contents = () => {
                   <Typography gutterBottom variant="subtitle1" component="div" sx={{ fontFamily: 'Gaegu, sans-serif' }}>
                     {hobby.hname}
                   </Typography>
-                  <CustomerRating /> {/* Assuming CustomerRating is a component that handles its own data */}
+                  <CustomerRating />
                 </Grid>
               </Grid>
               <Grid item>

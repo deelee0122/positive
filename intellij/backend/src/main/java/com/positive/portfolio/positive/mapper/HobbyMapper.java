@@ -7,6 +7,8 @@ import java.util.List;
 
 @Mapper
 public interface HobbyMapper {
-    public int insertHobby(HobbyVO vo);
-    public List<HobbyVO> hobbyList();
+
+    List<HobbyVO> hobbyList();
+
+    HobbyVO findHobbyById(Long hobby_id);
 }

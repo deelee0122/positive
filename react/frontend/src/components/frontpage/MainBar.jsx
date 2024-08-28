@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { Link } from 'react-router-dom';
 
+
 // Define styled components
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -89,26 +90,26 @@ const MainBar = () => {
 
         {/* Image container with fixed height and centered content */}
         <Link to="/" style={{ marginRight: '16px', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <div 
-            style={{
-              height: '40px',  // Adjusted height
-              display: 'flex', // Use flexbox for centering
-              alignItems: 'center', // Center vertically
-              justifyContent: 'center', // Center horizontally
-              overflow: 'hidden', // Hide overflow parts of the image
-            }}
-          >
-            <img 
-              src="./static/images/Positive.png" // Ensure this path is correct
-              alt="Logo"
-              style={{
-                height: '100%', // Fill container height
-                width: 'auto', // Maintain aspect ratio
-                objectPosition: 'center', // Center image
-              }}
-            />
-          </div>
-        </Link>
+  <div 
+    style={{
+      height: '40px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+    }}
+  >
+    <img 
+      src="/static/images/Positive.png" // Ensure this path is correct
+      alt="Logo"
+      style={{
+        height: '100%',
+        width: 'auto',
+        objectPosition: 'center',
+      }}
+    />
+  </div>
+</Link>
 
         <Search>
           <SearchIconWrapper>

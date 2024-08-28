@@ -1,20 +1,19 @@
-import { Box, createTheme, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import { Box, createTheme, Typography } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import Navbar from '../../components/frontpage/Navbar';
 import MainBar from '../../components/frontpage/MainBar';
 import Contents from '../../components/frontpage/Contents';
-
 
 const BeautyPage = () => {
     const [mode, setMode] = useState("light"); // Define theme mode state
 
     const theme = createTheme({
         palette: {
-            mode: mode, // Use state for mode
+            mode: mode,
         },
         typography: {
-            fontFamily: "Gaegu, sans-serif", // Set the font family to Gaegu
+            fontFamily: "Gaegu, sans-serif",
         },
     });
 
@@ -74,7 +73,8 @@ const BeautyPage = () => {
                     <Typography>All Contents</Typography>
                 </Box>
 
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => <Contents key={i} />)}
+                {/* Pass "Beauty" as the category prop */}
+                <Contents category="beauty" />
             </Box>
         </ThemeProvider>
     );
