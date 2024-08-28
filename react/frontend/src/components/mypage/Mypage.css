@@ -1,0 +1,77 @@
+/* Flexbox 컨테이너 스타일 */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* 항목이 수직 중앙에 정렬되도록 추가 */
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button 스타일 */
+.custom-button {
+    border-radius: 50px;
+    padding: 8px 16px;
+    /* 버튼의 내부 여백을 추가 */
+}
+
+/* Typography 스타일 */
+.typography-muted {
+    color: #CECECE;
+}
+
+.typography-bold {
+    font-weight: bold;
+}
+
+.typography-blue {
+    color: blue;
+    font-weight: bold;
+}
+
+.typography-heading {
+    font-weight: 600;
+}
+
+/* 이미지 스타일 */
+.image-small {
+    width: 20%;
+}
+
+/* 스타일 조정 */
+.full-width-button {
+    width: 100%;
+    /* 전체 너비를 가지도록 변경 */
+    max-width: 800px;
+    /* 최대 너비를 설정 */
+}
+
+.narrow-button {
+    width: 40px;
+    /* 버튼의 너비를 더 합리적인 값으로 조정 */
+    min-width: 40px;
+    /* 최소 너비를 설정하여 클릭 가능성을 보장 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 아이콘이 중앙에 오도록 추가 */
+}
+
+/* 추가적인 공통 스타일 */
+hr {
+    margin: 16px 0;
+    /* hr의 상하 여백을 설정 */
+    border: 1px solid #E0E0E0;
+    /* hr의 색상과 두께 설정 */
+}
+
+.deadline{
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* 항목들을 양쪽으로 배치 */
+        align-items: center;
+}

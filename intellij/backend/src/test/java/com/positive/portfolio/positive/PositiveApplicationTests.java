@@ -17,9 +17,12 @@ class PositiveApplicationTests {
 
 	}
 
+<<<<<<< HEAD
 	@Test
 	public void insert(){
 		mapper.insertHobby(new HobbyVO());
 	}
+=======
+>>>>>>> main
 
 }

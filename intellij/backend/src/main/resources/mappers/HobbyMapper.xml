@@ -3,12 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.positive.portfolio.positive.mapper.HobbyMapper">
+<<<<<<< HEAD
     <select id="hobbylist" resultType="com.positive.portfolio.positive.vo.HobbyVO">
+=======
+    <select id="hobbyList" resultType="com.positive.portfolio.positive.vo.HobbyVO">
+>>>>>>> main
         select * from hobby_tbl
     </select>
     <insert id="insertHobby" parameterType="com.positive.portfolio.positive.vo.HobbyVO">
-        insert into hobby_tbl(hobby_id, hname, hcategory, hprice, hreview, hplace, hdate)
-            values(#{hobby_id}, #{hname}, #{hcategory}, #{hprice}, #{hreview}, #{hplace}, #{hdate})
+        insert into hobby_tbl(hobby_id, hname, hcategory, hprice, hreview, hplace, hdate, hphoto)
+            values(#{hobby_id}, #{hname}, #{hcategory}, #{hprice}, #{hreview}, #{hplace}, #{hdate}, #{hphoto})
     </insert>
 
 </mapper>

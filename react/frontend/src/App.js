@@ -8,6 +8,9 @@ import CategoryPage from "./pages/categoryPages/CategoryPage";
 import BeautyPage from "./pages/categoryPages/BeautyPage";
 import DIYPage from "./pages/categoryPages/DIYPage";
 import CookingPage from "./pages/categoryPages/CookingPage";
+import ProductPage from "./pages/ProductPage";
+import SignUpPage from "./pages/categoryPages/SignUpPage";
+import Mypage from "./pages/Mypage";
 
 
 function App() {
@@ -22,6 +25,11 @@ function App() {
         <Route path="/beauty" element={<BeautyPage />} />
         <Route path="/diy" element={<DIYPage />} />
         <Route path="/cooking" element={<CookingPage />} />
+        <Route path="/productpage" element={<ProductPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/mypage" element={<Mypage />} />
+        
+        
       </Routes>
       
 

@@ -125,10 +125,12 @@ const MainBar = () => {
           <SmallText>찜</SmallText>
         </IconTextWrapper>
 
-        <IconTextWrapper>
-          <PersonSharpIcon />
-          <SmallText>마이</SmallText>
-        </IconTextWrapper>
+        <Link to="/mypage" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <IconTextWrapper>
+            <PersonSharpIcon />
+            <SmallText>마이</SmallText>
+          </IconTextWrapper>
+        </Link>
       </StyledToolbar>
     </AppBar>
   );

@@ -18,6 +18,7 @@ public class HobbyVO {
     private int hprice;
     private String hreview;
     private String hplace;
-    private LocalDateTime hdate;
+    private String hdate;
+    private String hphoto;
 
 }
