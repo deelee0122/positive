@@ -8,5 +8,5 @@ import java.util.List;
 @Mapper
 public interface HobbyMapper {
     public int insertHobby(HobbyVO vo);
-    public List<HobbyVO> list();
+    public List<HobbyVO> hobbyList();
 }

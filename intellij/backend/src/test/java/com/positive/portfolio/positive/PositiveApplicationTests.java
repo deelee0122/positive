@@ -19,7 +19,7 @@ class PositiveApplicationTests {
 
 	@Test
 	public void insert(){
-		mapper.insertHobby(new HobbyVO(0,"홍길동"));
+		mapper.insertHobby(new HobbyVO());
 	}
 
 }

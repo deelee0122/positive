@@ -10,24 +10,10 @@
         select * from user_tbl where role=#{role}
     </select>
     <insert id="insertUser" parameterType="com.positive.portfolio.positive.vo.UserVO">
-        insert into user_tbl (	user_id ,
-            username ,
-            password ,
-            email ,
-            first_name ,
-            last_name ,
-            phone_number ,
-            date_of_birth ,
-             role )
-            values(	#{user_id} ,
-        #{username} ,
-        #{password} ,
-         #{email} ,
-         #{first_name} ,
-         #{last_name} ,
-         #{phone_number} ,
-        #{date_of_birth} ,
-         #{role})
+        insert into user_tbl ( user_id , username , password , email , first_name , last_name , phone_number ,
+        date_of_birth , role )
+        values( #{user_id} , #{username} , #{password} , #{email} , #{first_name} , #{last_name} , #{phone_number} ,
+        #{date_of_birth} , #{role})
     </insert>
 
 </mapper>

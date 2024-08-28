@@ -12,14 +12,15 @@ import java.time.LocalDateTime;
 @ToString
 
 public class UserVO {
-    private int uno  ;
-    private String  user_id;
-    private String username ;
-    private String password ;
-    private String  email ;
-    private String first_name ;
-    private String last_name ;
-    private String  phone_number ;
-    private LocalDateTime date_of_birth  ;
-    private String  role; ;
+    private int uno;
+    private String user_id;
+    private String username;
+    private String password;
+    private String email;
+    private String first_name;
+    private String last_name;
+    private String phone_number;
+    private String date_of_birth;
+    private String role;
+    ;
 }

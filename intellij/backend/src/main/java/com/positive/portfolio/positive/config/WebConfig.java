@@ -1,4 +1,4 @@
-package com.green.nocode.controller.starter.config;
+package com.positive.portfolio.positive.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
