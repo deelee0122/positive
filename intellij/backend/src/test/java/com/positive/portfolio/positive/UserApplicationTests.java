@@ -40,7 +40,7 @@ class UserApplicationTests {
                 .atZone(ZoneId.systemDefault()) // Instant -> ZonedDateTime
                 .toLocalDateTime(); // ZonedDateTime -> LocalDateTime
 
-        userMapper.insertUser(new UserVO(0, "", "", "", "", "", "", "", localDateTime, "user"));
+        userMapper.insertUser(new UserVO(0, "", "", "", "", "", "", "", "", "user"));
 //        umapper.insertUser(a);
     }
 
