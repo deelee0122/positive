@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.positive.portfolio.positive.mapper.UserMapper">
+    <select id="userList" resultType="com.positive.portfolio.positive.vo.UserVO">
+        select * from user_tbl
+    </select>
+    <select id="userByRole" resultType="com.positive.portfolio.positive.vo.UserVO">
+        select * from user_tbl where role=#{role}
+    </select>
+    <insert id="insertUser" parameterType="com.positive.portfolio.positive.vo.UserVO">
+        insert into user_tbl (	user_id ,
+            username ,
+            password ,
+            email ,
+            first_name ,
+            last_name ,
+            phone_number ,
+            date_of_birth ,
+             role )
+            values(	#{user_id} ,
+        #{username} ,
+        #{password} ,
+         #{email} ,
+         #{first_name} ,
+         #{last_name} ,
+         #{phone_number} ,
+        #{date_of_birth} ,
+         #{role})
+    </insert>
+
+</mapper>
