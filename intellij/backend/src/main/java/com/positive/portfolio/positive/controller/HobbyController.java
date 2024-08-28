@@ -18,6 +18,6 @@ public class HobbyController {
 
     @GetMapping
     public List<HobbyVO> getHobbies() {
-        return hobbyMapper.list();
+        return hobbyMapper.hobbyList();
     }
 }

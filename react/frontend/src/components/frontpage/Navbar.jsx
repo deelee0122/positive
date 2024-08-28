@@ -38,7 +38,18 @@ const Navbar = () => {
           취미로 삶을 더욱 즐겁게, 당신만의 시간을 만들어 보세요!
         </CenteredTypography>
         <Typography sx={{ marginRight: '16px', fontSize: '15px' }}>호스트지원</Typography>
-        <Typography sx={{ marginRight: '16px', fontSize: '15px' }}>회원가입</Typography>
+        <Link 
+          to="/signup" 
+          style={{ 
+            marginRight: '16px', 
+            fontSize: '15px', 
+            textDecoration: 'none', 
+            color: '#767676',
+            fontFamily: '"Gaegu", sans-serif' // Apply font family here
+          }}
+        >
+          회원가입
+        </Link>
         <Link 
           to="/user" 
           style={{ 

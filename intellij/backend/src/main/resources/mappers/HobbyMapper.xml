@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.positive.portfolio.positive.mapper.HobbyMapper">
-    <select id="list" resultType="com.positive.portfolio.positive.vo.HobbyVO">
+    <select id="hobbyList" resultType="com.positive.portfolio.positive.vo.HobbyVO">
         select * from hobby_tbl
     </select>
     <insert id="insertHobby" parameterType="com.positive.portfolio.positive.vo.HobbyVO">

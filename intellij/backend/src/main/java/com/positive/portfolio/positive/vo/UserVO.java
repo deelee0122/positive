@@ -20,6 +20,6 @@ public class UserVO {
     private String first_name ;
     private String last_name ;
     private String  phone_number ;
-    private LocalDateTime date_of_birth  ;
+    private String date_of_birth  ;
     private String  role; ;
 }
