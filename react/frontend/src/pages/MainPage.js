@@ -1,12 +1,12 @@
 
 import Box from '@mui/material/Box';
 import Navbar from "../components/frontpage/Navbar";
-import Contents from "../components/frontpage/Contents";
 import MiddleBar from "../components/frontpage/MiddleBar";
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import MainBar from '../components/frontpage/MainBar';
 import SlideSide from '../components/frontpage/SlideSide';
+import Contents from '../components/frontpage/Contents';
 
 function MainPage() {
   const [mode, setMode] = useState("light"); // Define theme mode state
