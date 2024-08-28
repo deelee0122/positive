@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@fontsource/gaegu": "^5.0.19"
+    "@fontsource/gaegu": "^5.0.19",
+    "axios": "^1.7.5"
   }
 }

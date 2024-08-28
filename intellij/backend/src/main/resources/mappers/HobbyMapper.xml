@@ -7,8 +7,8 @@
         select * from hobby_tbl
     </select>
     <insert id="insertHobby" parameterType="com.positive.portfolio.positive.vo.HobbyVO">
-        insert into hobby_tbl(hobby_id, hname, hcategory, hprice, hreview, hplace, hdate)
-            values(#{hobby_id}, #{hname}, #{hcategory}, #{hprice}, #{hreview}, #{hplace}, #{hdate})
+        insert into hobby_tbl(hobby_id, hname, hcategory, hprice, hreview, hplace, hdate, hphoto)
+            values(#{hobby_id}, #{hname}, #{hcategory}, #{hprice}, #{hreview}, #{hplace}, #{hdate}, #{hphoto})
     </insert>
 
 </mapper>
