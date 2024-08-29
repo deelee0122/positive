@@ -1,10 +1,11 @@
 import React from 'react';
 import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
-import FitnessBadge from '../badges/FitnessBadge';
-import BeautyBadge from '../badges/BeautyBadge';
-import DIYBadge from '../badges/DIYBadge';
-import CookingBadge from '../badges/CookingBadge';
+import FitnessBadge from './FitnessBadge';
+import BeautyBadge from './BeautyBadge';
+import DIYBadge from './DIYBadge';
+import CookingBadge from './CookingBadge';
+
 
 const MiddleBar = () => {
   return (

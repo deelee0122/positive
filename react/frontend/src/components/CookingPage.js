@@ -1,9 +1,10 @@
 import { Box, createTheme, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles'; // Ensure correct import
-import Navbar from '../../components/frontpage/Navbar';
-import MainBar from '../../components/frontpage/MainBar';
-import Contents from '../../components/frontpage/Contents';
+import Navbar from './LogoutNavbar';
+import MainBar from './MainBar';
+import Contents from './Contents';
+
 
 
 const CookingPage = () => {

@@ -7,7 +7,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { Link } from 'react-router-dom';
 
-
 // Define styled components
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -80,7 +79,7 @@ const SmallText = styled(Typography)({
   color: 'gray',  // Default color
 });
 
-const MainBar = () => {
+const LoginMainBar = () => {
   return (
     <AppBar position='' sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
       <StyledToolbar>
@@ -90,26 +89,26 @@ const MainBar = () => {
 
         {/* Image container with fixed height and centered content */}
         <Link to="/" style={{ marginRight: '16px', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-  <div 
-    style={{
-      height: '40px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden',
-    }}
-  >
-    <img 
-      src="/static/images/Positive.png" // Ensure this path is correct
-      alt="Logo"
-      style={{
-        height: '100%',
-        width: 'auto',
-        objectPosition: 'center',
-      }}
-    />
-  </div>
-</Link>
+          <div 
+            style={{
+              height: '40px',  // Adjusted height
+              display: 'flex', // Use flexbox for centering
+              alignItems: 'center', // Center vertically
+              justifyContent: 'center', // Center horizontally
+              overflow: 'hidden', // Hide overflow parts of the image
+            }}
+          >
+            <img 
+              src="./static/images/Positive.png" // Ensure this path is correct
+              alt="Logo"
+              style={{
+                height: '100%', // Fill container height
+                width: 'auto', // Maintain aspect ratio
+                objectPosition: 'center', // Center image
+              }}
+            />
+          </div>
+        </Link>
 
         <Search>
           <SearchIconWrapper>
@@ -126,7 +125,7 @@ const MainBar = () => {
           <SmallText>찜</SmallText>
         </IconTextWrapper>
 
-        <Link to="/mypage" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link to="/loginMy" style={{ textDecoration: 'none', color: 'inherit' }}>
           <IconTextWrapper>
             <PersonSharpIcon />
             <SmallText>마이</SmallText>
@@ -137,4 +136,4 @@ const MainBar = () => {
   );
 }
 
-export default MainBar;
+export default LoginMainBar;

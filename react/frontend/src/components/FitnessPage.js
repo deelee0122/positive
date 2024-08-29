@@ -2,9 +2,9 @@ import { Box, createTheme, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 import { ThemeProvider } from '@emotion/react';
-import Navbar from '../../components/frontpage/Navbar';
-import MainBar from '../../components/frontpage/MainBar';
-import Contents from '../../components/frontpage/Contents';
+import Navbar from './LogoutNavbar';
+import MainBar from './MainBar';
+import Contents from './Contents';
 
 
 const FitnessPage = () => {

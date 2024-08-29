@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.positive.portfolio.positive.mapper.ReservationMapper">
+
+    <select id="reservationList" resultType="com.positive.portfolio.positive.vo.ReservationVO">
+        SELECT * FROM reservation_tbl
+    </select>
+
+    <insert id="insertReservation" parameterType="com.positive.portfolio.positive.vo.ReservationVO">
+        INSERT INTO reservation_tbl (rdate, rtime, rnumppl, login_id, hid)
+        VALUES (#{rdate}, #{rtime}, #{rnumppl}, #{login_id}, #{hid})
+    </insert>
+</mapper>

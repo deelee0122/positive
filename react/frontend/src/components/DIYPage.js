@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
 import { Box, createTheme, Typography } from '@mui/material';
-import { ThemeProvider } from '@emotion/react';
-import Navbar from '../../components/frontpage/Navbar';
-import MainBar from '../../components/frontpage/MainBar';
-import Contents from '../../components/frontpage/Contents';
+import React, { useState } from 'react';
+import { ThemeProvider } from '@mui/material/styles'; // Ensure correct import
+import Navbar from './LogoutNavbar';
+import MainBar from './MainBar';
+import Contents from './Contents';
 
-const BeautyPage = () => {
+
+
+const DIYPage = () => {
     const [mode, setMode] = useState("light"); // Define theme mode state
 
     const theme = createTheme({
         palette: {
-            mode: mode,
+            mode: mode, // Use state for mode
         },
         typography: {
-            fontFamily: "Gaegu, sans-serif",
+            fontFamily: "Gaegu, sans-serif", // Set the font family to Gaegu
         },
     });
 
@@ -37,26 +39,26 @@ const BeautyPage = () => {
                     >
                         <Typography
                             variant="h2" // Make it bigger by setting variant
-                            sx={{ fontWeight: 'bold', fontSize: { xs: '1rem', sm: '1rem', md: '1rem' }, color: 'gray' }} // Responsive font size
+                            sx={{ fontWeight: 'bold', fontSize: { xs: '1rem', sm: '1rem', md: '1.5rem' }, color: 'gray' }} // Responsive font size
                         >
-                            뷰티
+                            DIY
                         </Typography>
                     </Box>
                 </Box>
 
-                {/* Image below the Fitness title */}
+                {/* Image below the DIY title */}
                 <Box display="flex" justifyContent="center" alignItems="center" mt={2} mb={2}>
                     <Box
                         component="img"
-                        src="https://plus.unsplash.com/premium_vector-1682300881204-64e85d6fbfec?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with your image path or URL
-                        alt="Beauty Image"
+                        src="https://plus.unsplash.com/premium_vector-1682300971491-2b91200b942d?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with your image path or URL
+                        alt="DIY Image"
                         sx={{
                             width: { xs: '100%', sm: '70%', md: '50%' }, // Responsive width for different screen sizes
                             borderRadius: '8px', // Rounded corners for the image
                             boxShadow: 3, // Shadow for the image
                             maxHeight: '300px', // Maximum height to maintain aspect ratio
                             objectFit: 'cover', // Maintain aspect ratio
-                            objectPosition: 'center top', // Reposition the image to focus on the bottom
+                            objectPosition: 'center bottom', // Adjusted to show more of the bottom
                         }}
                     />
                 </Box>
@@ -73,11 +75,10 @@ const BeautyPage = () => {
                     <Typography>All Contents</Typography>
                 </Box>
 
-                {/* Pass "Beauty" as the category prop */}
-                <Contents category="beauty" />
+                <Contents category="diy" />
             </Box>
         </ThemeProvider>
     );
 }
 
-export default BeautyPage;
+export default DIYPage;

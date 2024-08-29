@@ -1,9 +1,10 @@
-import { Box, createTheme, Slide, Stack, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import "@fontsource/gaegu"; 
-import Navbar from "../components/frontpage/Navbar";
-import MainBar from "../components/frontpage/MainBar";
-import LoginForm from "../components/login/LoginForm";
+
+import MainBar from "./MainBar";
+import LoginForm from "./LoginForm";
+import Navbar from "./Navbar";
 
 
 function SubPage() {

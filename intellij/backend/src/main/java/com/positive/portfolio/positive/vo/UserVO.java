@@ -2,8 +2,6 @@ package com.positive.portfolio.positive.vo;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 
 @AllArgsConstructor
 @NoArgsConstructor

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import ProgramModal from './ProgramModal'; 
 import './Mypage.css';
+import ProgramModal from './ProgramModal';
 
 const ProgramSection = () => {
   const [open, setOpen] = useState(false);

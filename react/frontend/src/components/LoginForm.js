@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button } from '@mui/material';
-import { Link } from 'react-router-dom'; 
+import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
 
 const LoginForm = () => {
+    const [login, setLogin] =useState(false)
+    const [user, setUser] =useState(false)
     const [formData, setFormData] = useState({
         user_id: '',
         password: '',
@@ -14,14 +16,35 @@ const LoginForm = () => {
         setFormData({ ...formData, [id]: value });
     };
 
+//      const { id } = useParams();
+//   const location = useLocation();
+//   const currentPath = location.pathname;
+  const navigate = useNavigate();
+  
+
+    
+      
+    
+
+
     const handleSubmitLogin = (event) => {
         event.preventDefault();
-
+        console.log("여기가 안눌려")
         const apiUrl = '/api/users/login';
 
         axios.post(apiUrl, formData)
             .then((response) => {
                 console.log('Form submitted successfully:', response.data);
+               const userData = response.data;
+        setUser(userData);
+                if (user!=null) {
+                    console.log("로그인 되었어요: ")
+                     setLogin(true)
+                    navigate(`/loginMy`, { replace: true });
+                } else {
+                    console.log("로그인 되지 않았어요 ")
+                     navigate(`/login`, { replace: true });
+                }
                 
             })
             .catch((error) => {
@@ -79,7 +102,8 @@ const LoginForm = () => {
                     onChange={handleInputChange}
                 />
                 <Button 
-                    type="submit" 
+                    onClick={handleSubmitLogin}
+                    
                     variant="contained" 
                     sx={{ 
                         mt: 2, 

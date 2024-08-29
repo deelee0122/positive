@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Product from '../components/Product';
-import Navbar from '../components/frontpage/Navbar';
 import { Box, createTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
-import MainBar from '../components/frontpage/MainBar';
-import Reservation from '../components/Reservation';
+import Navbar from './LogoutNavbar';
+import MainBar from './MainBar';
+import Product from './Product';
+
 
 function ProductPage() {
   const [mode, setMode] = useState("light");
@@ -26,7 +26,6 @@ function ProductPage() {
         <Navbar />
         <MainBar />
         <Product hobby_id={hobby_id} />
-        <Reservation />
       </Box>
     </ThemeProvider>
   );

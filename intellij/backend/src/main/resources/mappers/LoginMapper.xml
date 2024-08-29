@@ -8,7 +8,7 @@
     </select>
 
     <select id="searchPW" resultType="com.positive.portfolio.positive.vo.LoginVO" parameterType="com.positive.portfolio.positive.vo.LoginVO">
-        select * from User_tbl where user_id = #{user_id} and username = #{username} and email = #{email} and phone_number = #{phone_number}
+        select * from User_tbl where user_id = #{user_id} and username = #{username} and email = #{email} and phone_number = #{phone_number} and date_of_birth = #{date_of_birth}
     </select>
 
 </mapper>

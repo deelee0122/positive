@@ -15,5 +15,8 @@
         values( #{user_id} , #{username} , #{password} , #{email} , #{first_name} , #{last_name} , #{phone_number} ,
         #{date_of_birth} , #{role})
     </insert>
+    <select id="getMyInfo" resultType="com.positive.portfolio.positive.vo.UserVO"  parameterType="com.positive.portfolio.positive.vo.UserVO">
+        select * from user_tbl where uno = #{uno}
+    </select>
 
 </mapper>

@@ -4,9 +4,9 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
-import CustomerRating from '../CustomerRating';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import CustomerRating from './CustomerRating';
 
 const Img = styled('img')({
   margin: 'auto',
@@ -76,7 +76,7 @@ const Contents = ({ category }) => {
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
                   <Typography variant="body2" fontSize={'10px'} color="text.secondary">
-                    {hobby.hcategory} 전체
+                    {hobby.hcategory} 
                   </Typography>
                   <Typography gutterBottom variant="subtitle1" component="div" sx={{ fontFamily: 'Gaegu, sans-serif' }}>
                     {hobby.hname}

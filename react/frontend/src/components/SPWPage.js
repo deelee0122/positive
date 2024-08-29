@@ -1,9 +1,10 @@
 import { Box, createTheme, Slide, Stack, ThemeProvider } from "@mui/material";
 import { useState } from "react";
-import Navbar from "../components/frontpage/Navbar";
 import "@fontsource/gaegu"; 
-import MainBar from "../components/frontpage/MainBar";
-import SearchPw from "../components/login/SearchPw";
+import Navbar from "./LogoutNavbar";
+import MainBar from "./MainBar";
+import SearchPw from "./SearchPw";
+
 
 
 

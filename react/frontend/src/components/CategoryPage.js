@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-
-import Navbar from '../../components/frontpage/Navbar';
-import MainBar from '../../components/frontpage/MainBar';
 import { Box, createTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react'; // Import ThemeProvider from @emotion/react
-import Category from '../../components/category/Category';
+import Navbar from './LogoutNavbar';
+import MainBar from './MainBar';
+import Category from './Category';
+
 
 const CategoryPage = () => {
   const [mode, setMode] = useState("light"); // Define theme mode state

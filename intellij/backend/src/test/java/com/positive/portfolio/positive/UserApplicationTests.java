@@ -1,6 +1,7 @@
 package com.positive.portfolio.positive;
 
 import com.positive.portfolio.positive.mapper.HobbyMapper;
+import com.positive.portfolio.positive.mapper.ReservationMapper;
 import com.positive.portfolio.positive.mapper.UserMapper;
 import com.positive.portfolio.positive.vo.HobbyVO;
 import com.positive.portfolio.positive.vo.UserVO;
@@ -18,6 +19,10 @@ class UserApplicationTests {
 
 	@Autowired
 	private UserMapper mapper;
+
+	@Autowired
+	private ReservationMapper rMapper;
+
 	@Test
 	void contextLoads() {
 
