@@ -9,7 +9,8 @@ create table hobby_tbl(
     hprice int not null,
     hreview varchar(1000),
     hplace varchar(100),
-    hdate date
+    hdate date,
+    hphoto varchar(1000)
 );
 
 drop table user_tbl;
