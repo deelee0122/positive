@@ -11,7 +11,9 @@ import CookingPage from "./pages/categoryPages/CookingPage";
 import ProductPage from "./pages/ProductPage";
 import SignUpPage from "./pages/categoryPages/SignUpPage";
 import Mypage from "./pages/Mypage";
-
+import React from "react";
+import AdminPage from "./components/Admin/AdminPage";
+import MemberList from "./components/Admin/MemberList";
 
 function App() {
   return (
@@ -28,12 +30,13 @@ function App() {
         <Route path="/productpage" element={<ProductPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/mypage" element={<Mypage />} />
-        
-        
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/memberList" element={<MemberList />} />
+        {/* <Route path="/hobbies" element={<Hobbies />} /> */}
+        {/* <Route path="/review" element={<Review />} /> */}
+        {/* <Route path="/faq" element={<Faq />} /> */}
       </Routes>
-      
-
-    </Box>
+    </Box >
   );
 }
 

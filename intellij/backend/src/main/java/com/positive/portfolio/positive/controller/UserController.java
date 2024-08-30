@@ -22,7 +22,7 @@ public class UserController {
 
 
     @GetMapping("/list")
-    public List<UserVO> userList() {//회원 전체 조회
+    public List<UserVO> userList() { //회원 전체 조회
         System.out.println("user input controller list page");
         return userMapper.userList();
     }

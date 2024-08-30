@@ -89,7 +89,7 @@ const MainBar = () => {
 
         {/* Image container with fixed height and centered content */}
         <Link to="/" style={{ marginRight: '16px', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <div 
+          <div
             style={{
               height: '40px',  // Adjusted height
               display: 'flex', // Use flexbox for centering
@@ -98,7 +98,7 @@ const MainBar = () => {
               overflow: 'hidden', // Hide overflow parts of the image
             }}
           >
-            <img 
+            <img
               src="./static/images/Positive.png" // Ensure this path is correct
               alt="Logo"
               style={{

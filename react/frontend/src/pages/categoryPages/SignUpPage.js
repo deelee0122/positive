@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SignUpForm from '../../components/SignUpForm'
+import SignUpForm from '../../components/login/SignUpForm'
 import Navbar from '../../components/frontpage/Navbar'
 import MainBar from '../../components/frontpage/MainBar'
 import { createTheme } from '@mui/material'

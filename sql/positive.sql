@@ -33,6 +33,7 @@ show tables;
 select * from hobby_tbl;
 select * from user_tbl;
 
+insert into User_tbl values(0,'admin', 'asd', '1234', 'admin@example.com' , 'sd', 'a', '010-1234-5678', '9999-99-99', 'admin');
 insert into User_tbl values(1,'user1', '서혜인', 'P@ssw0rd123!', 'hyein@example.com' , '혜인', '서', '010-1234-5678', '1995-05-21', 'admin');
 insert into User_tbl values(2,'user2',	'이혜리', 'Secure!2024', 'hyeri@example.com'	, '혜리', '이', '010-2345-6789', '1996-09-20', 'admin');
 insert into User_tbl values(3,'user3', '박보근', 'MyP@ssw0rd#1', 'bogeun@example.com', '보근', '박', '010-8465-8453', '1997-05-01', 'admin');
